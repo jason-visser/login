@@ -5,28 +5,34 @@
   <title></title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../public/css/style.css"/>
 </head>
 <body>
+  <section id="dataCollection" class="w3-container">
  {{>header}}
- <form>
-     <h2>Personal Data</h2>
-     <div><label>First Name:</label><input type="text" id="fname" name="First Name" /></div>
-     <div><label>Last Name:</label><input type="text" id="lname" name="Last Name" /></div>
-     <div><label>Email:</label><input type="email" id="email" name="Email" /></div> 
+ <form class="w3-center">
+ 
+ <!--Personal Data-->
+     <h2 class="w3-text-green">Personal Data</h2>
+     <div><input type="text" id="fname" placeholder="First Name" name="First Name" /></div>
+     <div><input type="text" id="lname" placeholder="Last Name" name="Last Name" /></div>
+     <div><input type="email" id="email" placeholder="Email" name="Email" /></div> 
      
-     
-     <h2>Credential Data</h2>
-     <div><label>Username:</label><input type="text" id="user" name="user" /></div>
-     <div><label>Password:</label><input type="password" id="password" name="password" /></div>
-     
-     <h2>Secret Stuff</h2>
-     <p>What street did you grow up on.</p>
-     <div><label>Answer:</label><input type="text" id="question" name="question" /></div>
-    </br>
-    
-     <input type="submit" id="submit" name="Submit" />
-     </form>
- {{footer}} 
+     <!--Registration Data-->
+     <h2 class="w3-text-green w3-center">Credential Data</h2>
+     <div><input type="text" id="user" placeholder="Username" name="user" /></div>
+     <div><input type="password" id="password" placeholder="Password" name="password" /></div>
+     <div><input type="password" id="password2" placeholder="Confirm Password" name="password2" /></div>
+     </br>
+  
+     <input class="w3-round-xxlarge" type="submit" id="submit" name="Submit" />
+          </form>
+
+</section>
+<section id="footer">
+  <div class="fixed">
+    {{>footer}}
+  </div>
+</section>
 </body>
 </html>   
