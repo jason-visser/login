@@ -10,17 +10,13 @@
 <body>
   <section id="dataCollection" class="w3-container">
  {{>header}}
- <form class="w3-center">
+ <form action="/api/register" method="POST" class="w3-center">
  
  <!--Personal Data-->
      <h2 class="w3-text-green">Personal Data</h2>
-     <div><input type="text" id="fname" placeholder="First Name" name="First Name" /></div>
-     <div><input type="text" id="lname" placeholder="Last Name" name="Last Name" /></div>
-     <div><input type="email" id="email" placeholder="Email" name="Email" /></div> 
-     
-     <!--Registration Data-->
-     <h2 class="w3-text-green w3-center">Credential Data</h2>
-     <div><input type="text" id="user" placeholder="Username" name="user" /></div>
+     <div><input type="text" id="fname" placeholder="First Name" name="firstName" /></div>
+     <div><input type="text" id="lname" placeholder="Last Name" name="lastName" /></div>
+     <div><input type="email" id="email" placeholder="Email" name="email" /></div> 
      <div><input type="password" id="password" placeholder="Password" name="password" /></div>
      <div><input type="password" id="password2" placeholder="Confirm Password" name="password2" /></div>
      </br>
