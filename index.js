@@ -3,8 +3,12 @@ const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const flash = require('connect-flash') //this is needed on the redirect of a succesul insert into the db. 
 const session = require('express-session')
+const passport = require('passport')
 
 const app = express();
+
+//Passport config
+require('./config/passport')(passport);
 
 //db config
 const db = require('./config/keys').mongoURI
@@ -28,6 +32,11 @@ app.use(session({
     saveUninitialized: true,
     //cookie: { secure: true }
   }))
+
+//Passport Middelware
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 //connect flash
 app.use(flash());
