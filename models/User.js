@@ -1,30 +1,21 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
-firstName: {
+name: {
     type: String,
-    required: True
-},
-lastName: {
-    type: String,
-    required: True
+    required: true
 },
 email: {
     type: String,
-    required: True
+    required: true
 },
 password: {
     type: String,
-    required: True
+    required: true
 },
-password2: {
-    type: String,
-    required: True
-},
-
-//default is 
+//default to set the date rather than required. 
 date: {
-    type: date,
+    type: Date,
     default: Date.now
 } 
 
