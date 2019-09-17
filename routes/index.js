@@ -17,5 +17,11 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => {
         })
     })
 
+    //Welcome Page
+router.get('/about', (req, res) => {
+    //below is pointing to the view that we are wanting to go to. 
+        res.render('about')
+    })
+
 
 module.exports = router; 

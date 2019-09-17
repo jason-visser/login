@@ -4,11 +4,20 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash') //this is needed on the redirect of a succesul insert into the db. 
 const session = require('express-session')
 const passport = require('passport')
+const path = require('path')
 
 const app = express();
 
 //Passport config
 require('./config/passport')(passport);
+
+//Public access
+console.log(__dirname)
+const publicDirectoryPath = path.join(__dirname, '/public')
+console.log(publicDirectoryPath)
+
+//Setup static directory to serve
+app.use(express.static(publicDirectoryPath))
 
 //db config
 const db = require('./config/keys').mongoURI
