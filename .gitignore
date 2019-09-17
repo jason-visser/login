@@ -1,2 +1,4 @@
 #database connection stuff.
 keys.js
+auth.js
+passport.js
