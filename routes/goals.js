@@ -16,6 +16,8 @@ router.post('/add', (req, res) => {
         goal
       });
 
+      Goal.findOne({})
+
     newGoal
                 .save()
                 .then(user => {

@@ -12,6 +12,9 @@ https://bootswatch.com
 
 9/17/2019: Next steps identify if EnsureAuthentication can protect collection of content by a group of users?  Thinking singlt tenant strategy.  Tomorrow...
 
+9/18/2019 - Figured out a way to save the data from another model.  Now need to figure out how to tie these together.  Gettting there....
+
+
 
 
 
