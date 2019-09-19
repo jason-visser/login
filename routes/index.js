@@ -23,5 +23,19 @@ router.get('/about', (req, res) => {
         res.render('about')
     })
 
+    router.get('/addGoal', ensureAuthenticated, (req, res) => {
+        //below is pointing to the view that we are wanting to go to. 
+            res.render('addGoal', {
+                name: req.user.name
+            })
+        })
+
+        router.get('/seeGoals', ensureAuthenticated, (req, res) => {
+            //below is pointing to the view that we are wanting to go to. 
+                res.render('seeGoals', {
+                    name: req.user.name
+                })
+            })
+    
 
 module.exports = router; 

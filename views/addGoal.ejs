@@ -1,0 +1,46 @@
+
+<%- include ./partials/emp_navbar.ejs %>
+
+<h1 class="mt-4">Add Goal</h1>
+<p class="lead mb-3"><%= name %>'s Goals</p>
+
+    <form action="/goals/add" method="POST">
+        
+        <div class="form-group">
+            <label for="timeline">When you going to achieve this goal:</label>
+            <select type="timeline" class="form-control" id="timeline" name="timeline" value="<%= typeof password2 != 'undefined' ? password2 : '' %>"> 
+              <option>30 Day</option>
+              <option>90 Day</option>
+              <option>1 Year</option>
+              <option>5 Year</option>
+              <option>10 Year</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="complexity">Complexity of this goal:</label>
+            <select class="form-control" id="complexity" name="complexity"  value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+              <option>I've Done this before</option>
+              <option>New to Me</option>
+              <option>New to Everyone</option>
+              <option>In the Stars</option>
+            </select>
+          </div>
+        
+        
+        <div class="form-group">
+          <label for="goal">Goal Objective</label>
+          <textarea
+            type="goal"
+            id="goal"
+            name="goal"
+            class="form-control"
+            rows="5"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+        </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Become a Better You!</button>
+      </form>
+
+
+
