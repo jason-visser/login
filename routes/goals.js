@@ -5,6 +5,14 @@ const router = express.Router();
 //Goal Model
 const Goal = require('../models/Goal')
 
+router.get('/list', (req, res) => {
+    res.render('list', 
+    {
+        name: req.user.name
+    })
+})
+    
+
 router.post('/add', (req, res) => {
    
 
@@ -25,7 +33,7 @@ router.post('/add', (req, res) => {
                     'success_msg',
                     'You are now registered and can log in'
                   );
-                  res.redirect('/goals/add');
+                  res.redirect('/goals/list');
                 })
                 .catch(err => console.log(err));
 
